@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FabModal</title>
-  <script src="FabModal.js" type="module" defer></script>
+  <script src="src/js/FabModal.js" type="module" defer></script>
 </head>
+<style>
+  fab-modal .header {
+    background-color: red;
+  }
+</style>
 <body>
   <button class="open">Open</button>
-  <fab-modal title="Test">
-    <p>Mon super contenu</p>
+  <fab-modal title="Test" visible>
+    <p>My content using slot</p>
   </fab-modal>
   <script>
     modal = document.querySelector("fab-modal");
     modal.addEventListener("cancel", function() {
-      alert("cancel event raised");
+      // alert("cancel event raised");
     });
-    modal.addEventListener("validate", function() {
-      alert("ok event raised");
+    modal.addEventListener("ok", function() {
+      // alert("ok event raised");
     });
   
     open = document.querySelector(".open");

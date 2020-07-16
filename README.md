@@ -1,4 +1,4 @@
-### FabModal :happy:
+# FabModal :smile:
 
-# My first HTMLCustomElement
+## My first HTMLCustomElement
 

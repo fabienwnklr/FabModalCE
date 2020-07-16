@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FabModal</title>
+  <script src="FabModal.js" type="module" defer></script>
+</head>
+<body>
+  <button class="open">Open</button>
+  <fab-modal title="Test">
+    <p>Mon super contenu</p>
+  </fab-modal>
+  <script>
+    modal = document.querySelector("fab-modal");
+    modal.addEventListener("cancel", function() {
+      alert("cancel event raised");
+    });
+    modal.addEventListener("validate", function() {
+      alert("ok event raised");
+    });
+  
+    open = document.querySelector(".open");
+    open.addEventListener("click", function() {
+      modal.visible = true;
+    });
+  </script>
+</body>
+</html>
